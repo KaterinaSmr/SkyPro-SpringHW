@@ -20,7 +20,10 @@ public class CalculatorServiceImpl implements CalculatorService{
     }
 
     @Override
-    public int divide(int num1, int num2) {
+    public int divide(int num1, int num2){
+        if (num2 == 0){
+            throw new DividingByZeroException();
+        }
         return num1 / num2;
     }
 }
