@@ -45,8 +45,6 @@ public class CalculatorController {
                        @RequestParam(required = false, name = "num2") Integer num2){
         if (num1 == null || num2 == null){
             return "Ошибка: Параметры не ведены";
-        } else if (num2 == 0) {
-            return "На 0 делить нельзя";
         }
         return num1 + " / " + num2 + " = " + calculatorService.divide(num1, num2);
     }
